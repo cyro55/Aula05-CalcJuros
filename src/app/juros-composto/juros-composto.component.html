@@ -1,0 +1,24 @@
+<div class="container-fluid">
+<h1>Juros Composto</h1>
+<p> Valor:
+  <input class="form-control" type="number" [(ngModel)]="valor">
+<p> Taxa de juros:</p>
+<input class="form-control" type="number" [(ngModel)]="taxa">
+<p> Tempo:
+  <input class="form-control" type="number" [(ngModel)]="tempo">
+
+  <button class="btn btn-info" (click)="calcJurosComposto()">Calcular</button>
+
+  <table>
+  <thead>
+    <th>Valor</th>
+    <th>Parcela</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let valor of list; index as i">
+      <td>{{valor}}</td>
+      <td>{{i+1}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
